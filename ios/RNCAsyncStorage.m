@@ -84,7 +84,7 @@ static NSString *RCTCreateStorageDirectoryPath(NSString *storageDir) {
 #if TARGET_OS_TV
   storageDirectoryPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
 #else
-  storageDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+  storageDirectoryPath = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES).firstObject;
 #endif
   storageDirectoryPath = [storageDirectoryPath stringByAppendingPathComponent:storageDir];
   return storageDirectoryPath;
